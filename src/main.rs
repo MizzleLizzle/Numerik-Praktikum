@@ -5,6 +5,8 @@ fn main() {
     println!("{}", root1.unwrap());
     let root2 = solvers::secant_method(&f, 0.0, 1.0, 0.00001, 10000);
     println!("{}", root2.unwrap());
+    let root3 = solvers::bisection_method(&f, 0.0, 1.0, 0.00001, 10000);
+    println!("{}", root3.unwrap());
 }
 
 fn f(x: f64) -> f64 {
