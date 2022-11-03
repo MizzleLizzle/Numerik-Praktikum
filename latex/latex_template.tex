@@ -1,0 +1,163 @@
+\documentclass[a4paper,12pt]{article}
+%\documentclass[a4paper,12pt,twoside]{book}
+
+\usepackage[margin=3.5cm]{geometry}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{epsfig}
+
+
+
+
+\newtheorem{theorem}{Satz}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{bemerkung}[theorem]{Bemerkung}
+
+
+% % if document type is book, the following commands lead to an enumeration 
+% % of theorems etc of the type 2.3, if it is the third theorem in chapter 2
+% \numberwithin{theorem}{chapter}
+% \numberwithin{figure}{chapter}
+% \numberwithin{equation}{chapter}
+
+
+
+\newcommand{\R}{\mathbb{R}}
+
+
+
+
+
+
+\begin{document}
+
+\begin{titlepage}\parindent0cm
+Universit\"at Leipzig\\
+Fakult\"at f\"ur Mathematik und Informatik\\
+Mathematisches Insitut\\
+
+\vspace{5cm}
+
+
+\begin{center}
+\huge{PROJEKTTITEL}
+
+\vspace{1cm}
+\Large{Projekt im Numerischen Praktikum}\\
+\vspace{0.5cm}
+\large{eingereicht von NAMEN}
+\end{center}
+
+\vfill
+\begin{minipage}{\textwidth}
+Leipzig, den DATUM
+\end{minipage}
+\end{titlepage}
+
+
+
+
+% % if documentclass is book, \frontmatter leads to an enumeration like i, ii, iii 
+% % of the pages
+% \frontmatter
+
+\tableofcontents
+
+% % if documentclass is book, \mainmatter starts the standard page numbering
+% % of the pages
+% \mainmatter
+
+\newpage
+
+
+\section{Einleitung}
+
+
+\section{Erster Abschnitt} 
+
+\subsection{Erster Unterabschnitt}
+
+
+\subsection{Hier z.B.\ numerische Beispiele}
+
+Dieser Abschnitt enth\"alt eine Umgebung f\"ur eine Abbildung 
+in~\ref{f:Bezeichnung} und die Tabelle~\ref{tab:Bezeichnung}.
+
+\begin{figure}
+    %\includegraphics[width=0.8\textwidth]{name-des-Bildes}
+    \caption{\label{f:Bezeichnung}Hier kann eine Abbildung hinein.}
+\end{figure}
+
+\begin{table}
+    \begin{tabular}{l|ll}
+        $k$ & $x_k$ & $y_k$\\
+        \hline 
+        $1$ & $2$ & $2.5$ \\
+        $2$ & $z_k$ & $3.654$
+    \end{tabular}
+    \caption{\label{tab:Bezeichnung}Dies ist eine Beispiel-Tabelle.}
+\end{table}
+
+
+Au{\ss}erdem ist hier noch die Definition~\ref{def:newton} und der 
+Satz~\ref{th:conv_newton} enthalten.
+
+\begin{definition}[Newton-Verfahren]\label{def:newton}
+    Das Newton-Verfahren ist definiert durch\dots
+\end{definition}
+
+
+\begin{theorem}[Konvergenz des Newton-Verfahrens]\label{th:conv_newton}
+    Das Newton-Verfahren ist lokal quadratisch konvergent.
+\end{theorem}
+
+\begin{proof}
+    Hier ist der Beweis. Siehe auch \cite[(5.3.7) Theorem]{FreundHoppe2007}.
+\end{proof}
+
+
+\section{Evtl.\ Zusammenfassung}
+
+
+
+%\newpage
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\bibliographystyle{alpha}
+\bibliography{ref.bib}
+
+% % if documentclass is book, \backmatter causes that chapters etc are not 
+% % enumerated
+% \backmatter
+
+\newpage 
+
+\noindent
+{\Large Erkl\"arung}\bigskip\\
+
+\noindent
+Ich/Wir erkl\"aren, dass ich/wir die vorliegende Arbeit selbstst\"andig 
+und nur unter Verwendung der angegebenen Literatur und Hilfsmittel angefertigt 
+habe/haben.\bigskip\\
+
+\noindent
+Leipzig, den \today 
+
+\addcontentsline{toc}{section}{Selbstst\"andigkeitserkl\"arung}
+
+
+\end{document}
+
+
+
+
