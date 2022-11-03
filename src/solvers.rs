@@ -56,3 +56,18 @@ pub fn bisection_method(
     }
     Err("No root found in specified iterations")
 }
+
+pub fn fixed_point_method(
+    g: &dyn Fn(f64) -> f64,
+    mut x: f64,
+    tolerance: f64,
+    max_iterations: usize,
+) -> Result<f64, &'static str> {
+    for _ in 0..max_iterations {
+        x = g(x);
+        if (x - g(x)).abs() < tolerance {
+            return Ok(x);
+        }
+    }
+    Err("No root found in specified iterations")
+}
