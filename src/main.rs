@@ -1,10 +1,10 @@
 mod solvers;
 
 fn main() {
-    let root1 = solvers::newtons_method(&f_1, &f_1_prime, 0.5, 0.00001, 10000);
-    println!("{}", root1.unwrap());
-    let root2 = solvers::secant_method(&f_1, 0.0, 1.0, 0.00001, 10000);
-    println!("{}", root2.unwrap());
+    let series = solvers::newtons_method_error_series(&f_1, &f_1_prime, 1.0, 0.00001, 10000);
+    println!("{:?}", series.unwrap());
+    let series2 = solvers::secant_method_error_series(&f_1, 0.0, 1.0, 0.00001, 10000);
+    println!("{:?}", series2.unwrap());
     let root3 = solvers::bisection_method(&f_1, 0.0, 1.0, 0.00001, 10000);
     println!("{}", root3.unwrap());
     let root4 = solvers::fixed_point_method(&g_1_b, 0.1, 0.00001, 10000);
